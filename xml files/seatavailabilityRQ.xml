@@ -1,0 +1,22 @@
+<IATA_SeatAvailabilityRQ xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersMessage" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <DistributionChain>
+      <DistributionChainLink xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+         <Ordinal>1</Ordinal>
+         <OrgRole>Seller</OrgRole>
+         <ParticipatingOrg>
+            <Name>ABCTravel</Name>
+            <OrgID>12345678</OrgID>
+         </ParticipatingOrg>
+      </DistributionChainLink>
+   </DistributionChain>
+   <Request>
+      <SeatAvailCoreRequest xmlns="http://www.iata.org/IATA/2015/EASD/00/IATA_OffersAndOrdersCommonTypes">
+         <OfferRequest>
+            <Offer>
+               <OfferID>ULL3omZOvJGPzxyaXoomJ8001|b4f47565-ad13-479f-8f70-02b20d36048a</OfferID>
+               <OwnerCode>VS</OwnerCode>
+            </Offer>
+         </OfferRequest>
+      </SeatAvailCoreRequest>
+   </Request>
+</IATA_SeatAvailabilityRQ>

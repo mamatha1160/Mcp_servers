@@ -1,0 +1,68 @@
+[
+    {
+        "test_case_id": "TC_001",
+        "description": "Validate creation of a passenger list with valid passenger types",
+        "test_steps": [
+            "Create a PaxList object with ADTs, CHDs, GBEs, and INFs.",
+            "Submit the PaxList object to the NDC API.",
+            "Verify the API returns a success response."
+        ],
+        "expected_result": "Success response with valid passenger list",
+        "priority": "High"
+    },
+    {
+        "test_case_id": "TC_002",
+        "description": "Validate unique PaxID for each passenger",
+        "test_steps": [
+            "Create a PaxList object with duplicate PaxIDs.",
+            "Submit the PaxList object to the NDC API.",
+            "Verify the API returns an error response indicating duplicate PaxID."
+        ],
+        "expected_result": "Error response with 'duplicate PaxID' message",
+        "priority": "High"
+    },
+    {
+        "test_case_id": "TC_003",
+        "description": "Validate valid PTC codes",
+        "test_steps": [
+            "Create a PaxList object with valid PTC codes (ADT, CHD, GBE, INF).",
+            "Submit the PaxList object to the NDC API.",
+            "Verify the API returns a success response."
+        ],
+        "expected_result": "Success response with valid passenger list",
+        "priority": "High"
+    },
+    {
+        "test_case_id": "TC_004",
+        "description": "Validate invalid PTC codes",
+        "test_steps": [
+            "Create a PaxList object with invalid PTC codes (e.g., XYZ).",
+            "Submit the PaxList object to the NDC API.",
+            "Verify the API returns an error response indicating invalid PTC code."
+        ],
+        "expected_result": "Error response with 'invalid PTC code' message",
+        "priority": "High"
+    },
+    {
+        "test_case_id": "TC_005",
+        "description": "Validate maximum one infant per adult",
+        "test_steps": [
+            "Create a PaxList object with two infants associated with one adult.",
+            "Submit the PaxList object to the NDC API.",
+            "Verify the API returns an error response indicating maximum one infant per adult."
+        ],
+        "expected_result": "Error response with 'maximum one infant per adult' message",
+        "priority": "High"
+    },
+    {
+        "test_case_id": "TC_006",
+        "description": "Validate at least one adult in the passenger list",
+        "test_steps": [
+            "Create a PaxList object with only children and infants.",
+            "Submit the PaxList object to the NDC API.",
+            "Verify the API returns an error response indicating at least one adult required."
+        ],
+        "expected_result": "Error response with 'at least one adult required' message",
+        "priority": "High"
+    }
+]
